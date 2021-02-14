@@ -80,7 +80,7 @@ const createSlider = () => {
 
   sliderContainer.appendChild(prevNext)
   document.querySelector('.main').style.display = 'block';
-  // hide image aria
+  // hide image area
   imagesArea.style.display = 'none';
 
   const durationInput = document.getElementById('duration').value;
@@ -126,15 +126,15 @@ const changeSlide = (index) => {
 
   items[index].style.display = "block"
 }
-// Trigger search after click search button
+//work on search after click search button
 searchBtn.addEventListener('click', function () {
   search()
 })
-// Trigger search after hit enter
+// work on search after hit enter
 searchField.addEventListener('keypress', function(event){
   event.key == 'Enter' && search()
 })
-// Trigger image searching
+// work on image searching
 const search = ()=> {
   if (searchField.value != '') {
     document.querySelector('.main').style.display = 'none';
@@ -143,7 +143,7 @@ const search = ()=> {
     sliders.length = 0;
     searchField.value = '';
   } else {
-    alert('Please search anything')
+    alert('Please enter any keyword')
   }
 }
 
@@ -171,7 +171,7 @@ const showNotFoundMessage = condition => {
     notFoundArea.style.display = 'none'
   }
 }
-// Close slider after clicking back button
+// Close after clicking Exit button
 const closeSlider = ()=> {
   document.querySelector('.main').style.display = 'none';
   imagesArea.style.display = 'block';
@@ -182,3 +182,4 @@ const closeSlider = ()=> {
     item[0].classList.remove('added');
   }
 }
+// thank you
